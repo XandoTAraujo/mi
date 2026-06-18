@@ -40,6 +40,15 @@ return [0,0,0,0];
 
 function atualizaCronometro(){
 for (let i=0; i<contadores.length;i++){
-document.getElementByld("dias"+i).textosContent = calculaTempo(tempos[i])[0];
-document.getElementByld("horas"+i).textosContent = calculaTempo(tempos[i])[1];
-document.getElementByld
+document.getElementByld("dias"+i).textContent = calculaTempo(tempos[i])[0];
+document.getElementByld("horas"+i).textContent = calculaTempo(tempos[i])[1];
+document.getElementByld("min"+i).textContet = calculaTempo(tempos[i])[2];
+document.getElementByld("seg"+i).textContent = calculaTempo(tempos[i])[3];
+}
+}
+
+function comecaCronometro(){
+atualizaCronometro();
+setInterval(atualizaCronometro,1000);
+}
+comecaCronometro();
