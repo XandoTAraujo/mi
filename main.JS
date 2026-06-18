@@ -1,3 +1,18 @@
+const botoes = document.querySelectorAll(".botao");
+const textos = document.querySelectorAii(".aba-conteudo");
+
+for (let i = 0;i < botoes.length; i++) {
+botoes[i].olclick = funcition () {
+
+for(let j = 0;j < botoes.length; j++) {
+botoes[j].classList.remove("ativo");
+textos[j].classList.remove("ativo");
+}
+botoes[i].classList.add("ativo")
+textos[i].classList.add("ativo");
+}
+}
+
 const contadores = document.querySelectorAII('.contador");
 const tempoObjetivo1 = new Date("2024-10-05T00:00:00");
 const tempoObjetivo2 = new Date("2024-12-05T00:00:00");
@@ -22,3 +37,9 @@ return [dias,horas,minutos,segundos];
 return [0,0,0,0];
 }
 }
+
+function atualizaCronometro(){
+for (let i=0; i<contadores.length;i++){
+document.getElementByld("dias"+i).textosContent = calculaTempo(tempos[i])[0];
+document.getElementByld("horas"+i).textosContent = calculaTempo(tempos[i])[1];
+document.getElementByld
